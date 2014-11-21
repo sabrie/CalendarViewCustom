@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF5759B2-2B61-4CBF-B992-A5E77EEDA339}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CalendarViewCustom</RootNamespace>
+    <AssemblyName>CalendarViewCustom</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalendarView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Telerik.Sitefinity.ContentModules\Telerik.Sitefinity.ContentModules.csproj">
+      <Project>{89314a38-7755-46fd-bf93-51813f442479}</Project>
+      <Name>Telerik.Sitefinity.ContentModules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Telerik.Sitefinity.Model\Telerik.Sitefinity.Model.csproj">
+      <Project>{d7192694-82fa-4765-a290-e7ce39fb6e34}</Project>
+      <Name>Telerik.Sitefinity.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Telerik.Sitefinity.Resources\Telerik.Sitefinity.Resources.csproj">
+      <Project>{516bfc5d-1825-4da4-9906-4078ac936b22}</Project>
+      <Name>Telerik.Sitefinity.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Telerik.Sitefinity\Telerik.Sitefinity.csproj">
+      <Project>{324addd1-4782-4857-abe7-de551da41df2}</Project>
+      <Name>Telerik.Sitefinity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Telerik.Sitefinity.Utilities.csproj">
+      <Project>{31d33365-655a-45ac-a690-bb62d6fa08e7}</Project>
+      <Name>Telerik.Sitefinity.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CalendarView.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
